@@ -1,12 +1,12 @@
 import java.util.*;
 
-class BackAround
+class Embed
 {
-	public String backAround(String str)
+	public String embedWord(String embed,String str)
 	{
-		//StringBuffer sb = new StringBuffer(str);
-		int length=str.length();
-		return(str.charAt(length-1)+str+str.charAt(length-1));
+		int len=embed.length();
+		String sb=embed.substring(0,len/2)+str+embed.substring(len/2);
+		return sb;
 	}
 }
 
@@ -14,8 +14,11 @@ class Solution
 {
 	public static void main(String args[])
 	{
-		BackAround obj = new BackAround();
+		Embed obj = new Embed();
 
-		System.out.println(obj.backAround("Hello"));
+		System.out.println(obj.embedWord("<<>>", "Hello"));
+		System.out.println(obj.embedWord("<>", "HTML"));
+		System.out.println(obj.embedWord("[]", "1,2,3,4,5"));
+		System.out.println(obj.embedWord("{[]}", "a:1, b:2, c:3"));
 	}
 }

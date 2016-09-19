@@ -1,23 +1,21 @@
 import java.util.*;
 
-class DeleteChar
+class BackAround
 {
-	public String missingChar(String str,int index)
+	public String backAround(String str)
 	{
-		StringBuffer sb = new StringBuffer(str);
-
-		return(sb.deleteCharAt(index).toString());
+		//StringBuffer sb = new StringBuffer(str);
+		int length=str.length();
+		return(str.charAt(length-1)+str+str.charAt(length-1));
 	}
 }
-
 
 class Solution
 {
 	public static void main(String args[])
 	{
-		DeleteChar obj = new DeleteChar();
+		BackAround obj = new BackAround();
 
-		System.out.println(obj.missingChar("Java", 1));
-		System.out.println(obj.missingChar("Android", 0));
+		System.out.println(obj.backAround("Hello"));
 	}
 }

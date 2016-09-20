@@ -1,0 +1,22 @@
+import java.util.*;
+
+class DeleteString
+{
+	public String withoutString(String base,String remove)
+	{
+		String removedString = base.replaceAll(remove,"");
+		return removedString;
+	}
+}
+
+class Solution12
+{
+	public static void main(String args[])
+	{
+		DeleteString obj = new DeleteString();
+
+		System.out.println(obj.withoutString("Hello there","llo"));
+		System.out.println(obj.withoutString("Hello there","e"));
+		System.out.println(obj.withoutString("Hello there","x"));
+	}
+}
